@@ -1,0 +1,127 @@
+/* ============================================================
+   HOME PAGE STYLES
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.home-hero {
+  border-bottom: 1px solid #000000;
+  padding: 96px 32px 80px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.home-hero__title {
+  font-family: 'Georgia', serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
+.home-hero__tagline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.15rem;
+  color: #444444;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* ---------- Feature Strip ---------- */
+.home-features {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 32px;
+}
+
+.home-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid #000000;
+}
+
+.home-features__card {
+  padding: 40px 32px;
+  border-right: 1px solid #000000;
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.home-features__card:last-child {
+  border-right: none;
+}
+
+.home-features__card:hover {
+  background-color: #f5f5f5;
+}
+
+.home-features__card-heading {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+
+.home-features__card-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+.home-features__card-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1px;
+}
+
+.home-features__card-link:hover {
+  text-decoration: none;
+  color: #555555;
+  border-bottom-color: #555555;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 64px 16px 56px;
+  }
+
+  .home-hero__title {
+    font-size: 2.75rem;
+  }
+
+  .home-hero__tagline {
+    font-size: 1rem;
+  }
+
+  .home-features {
+    padding: 40px 16px;
+  }
+
+  .home-features__grid {
+    grid-template-columns: 1fr;
+    border: 1px solid #000000;
+  }
+
+  .home-features__card {
+    border-right: none;
+    border-bottom: 1px solid #000000;
+  }
+
+  .home-features__card:last-child {
+    border-bottom: none;
+  }
+}

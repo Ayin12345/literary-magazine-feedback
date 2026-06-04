@@ -1,0 +1,251 @@
+/* ============================================================
+   GLOBAL DESIGN SYSTEM
+   Literary Magazine Demo — claude-sonnet1
+   Palette: #ffffff background, #000000 text/borders only
+   ============================================================ */
+
+/* ---------- Reset & Box Model ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keyboard focus outline — visible only when navigating by keyboard */
+:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+/* Remove default focus ring for mouse/touch; keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ---------- Base ---------- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* Offset anchor scrolls so sticky navbar (64px) doesn't cover target */
+  scroll-padding-top: 72px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #000000;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #000000;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Spacing Scale (8px base unit) ---------- */
+/* xs: 8px | sm: 16px | md: 24px | lg: 32px | xl: 48px | 2xl: 64px | 3xl: 96px */
+
+/* ---------- Layout Helpers ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.page-wrapper {
+  padding: 64px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.page-heading {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 24px;
+  margin-top: 48px;
+}
+
+/* First section heading directly after page heading needs no extra top gap */
+.page-heading + .section-heading {
+  margin-top: 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0;
+  padding: 12px 28px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.btn-outline:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.card:hover {
+  background-color: #f5f5f5;
+}
+
+/* ---------- Grids ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ---------- Placeholder Boxes (CSS only, no images) ---------- */
+.placeholder-box {
+  background-color: #e8e8e8;
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888888;
+  font-size: 0.8rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Dividers ---------- */
+.divider {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 40px 0;
+}
+
+/* ---------- Main Content Area ---------- */
+.site-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- 404 Not Found ---------- */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 96px 32px;
+  gap: 24px;
+}
+
+.not-found__code {
+  font-family: 'Georgia', serif;
+  font-size: 6rem;
+  font-weight: normal;
+  color: #000000;
+  line-height: 1;
+}
+
+.not-found__message {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+/* ---------- Utility ---------- */
+.text-center { text-align: center; }
+.text-sm { font-size: 0.875rem; }
+.text-muted { color: #555555; }
+.mt-sm { margin-top: 16px; }
+.mt-md { margin-top: 24px; }
+.mt-lg { margin-top: 32px; }
+.mb-sm { margin-bottom: 16px; }
+.mb-md { margin-bottom: 24px; }
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .page-heading { font-size: 1.75rem; }
+  .page-wrapper { padding: 40px 16px; }
+  .container { padding: 0 16px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}

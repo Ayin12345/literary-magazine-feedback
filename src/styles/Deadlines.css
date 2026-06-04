@@ -1,0 +1,202 @@
+/* ============================================================
+   DEADLINES PAGE STYLES
+   ============================================================ */
+
+/* ---------- Intro ---------- */
+.deadlines-intro {
+  max-width: 680px;
+  margin-bottom: 8px;
+}
+
+.deadlines-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+/* ---------- Deadline Cards ---------- */
+.deadlines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.deadlines-card {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid #cccccc;
+  transition: background-color 0.15s ease;
+}
+
+.deadlines-card:last-child {
+  border-bottom: none;
+}
+
+.deadlines-card:hover {
+  background-color: #f5f5f5;
+}
+
+/* ── Date Badge ── */
+.deadlines-card__date {
+  padding: 24px 20px;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+  background-color: #f9f9f9;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deadlines-card__date-inner {
+  border: 2px solid #000000;
+  padding: 8px 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+}
+
+.date-mmdd {
+  display: block;
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #000000;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.date-yyyy {
+  display: block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #666666;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ── Content ── */
+.deadlines-card__content {
+  padding: 24px 28px;
+}
+
+.deadlines-card__title {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.deadlines-card__desc {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* ── Status Icon ── */
+.deadlines-card__status {
+  padding: 24px 24px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+}
+
+.status--passed  { color: #000000; }   /* ● filled circle  */
+.status--upcoming { color: #555555; }  /* ○ empty circle   */
+.status--today   { color: #000000; }   /* ★ star           */
+
+/* ── Status Legend ── */
+.deadlines-legend {
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.deadlines-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #555555;
+}
+
+.deadlines-legend__icon {
+  font-size: 1rem;
+}
+
+/* ---------- Reminders ---------- */
+.deadlines-reminders ul {
+  margin-top: 16px;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.deadlines-reminders ul li {
+  padding: 16px 24px;
+  border-bottom: 1px solid #cccccc;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #222222;
+  line-height: 1.6;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.deadlines-reminders ul li:last-child {
+  border-bottom: none;
+}
+
+.deadlines-reminders ul li::before {
+  content: '—';
+  color: #aaaaaa;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .deadlines-card {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .deadlines-card__date {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
+    justify-content: flex-start;
+    padding: 16px 16px;
+    background-color: transparent;
+  }
+
+  .deadlines-card__content {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    padding: 16px 16px;
+  }
+
+  .deadlines-card__status {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 16px 16px;
+    align-items: flex-start;
+  }
+}

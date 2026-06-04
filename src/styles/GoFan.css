@@ -1,0 +1,131 @@
+/* ============================================================
+   GOFAN PAGE STYLES
+   ============================================================ */
+
+/* ---------- Intro ---------- */
+.gofan-intro {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.gofan-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+/* ---------- Centered CTA Card ---------- */
+.gofan-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.gofan-card {
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 48px 56px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── QR Code Placeholder ── */
+.gofan-qr {
+  width: 180px;
+  height: 180px;
+  background-color: #e8e8e8;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.gofan-qr__dots {
+  display: grid;
+  grid-template-columns: repeat(5, 12px);
+  grid-template-rows: repeat(5, 12px);
+  gap: 4px;
+}
+
+.gofan-qr__dot {
+  background-color: #cccccc;
+  border-radius: 1px;
+}
+
+/* Alternate a checkerboard-ish pattern for QR visual hint */
+.gofan-qr__dot:nth-child(odd)  { background-color: #bbbbbb; }
+.gofan-qr__dot:nth-child(even) { background-color: #dddddd; }
+/* Corner squares darker */
+.gofan-qr__dot:nth-child(1),
+.gofan-qr__dot:nth-child(5),
+.gofan-qr__dot:nth-child(21),
+.gofan-qr__dot:nth-child(25) { background-color: #888888; }
+
+.gofan-qr__label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin-top: 6px;
+}
+
+/* ── Divider within card ── */
+.gofan-card__divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 28px 0;
+}
+
+/* ── Action Block ── */
+.gofan-action {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.gofan-action:last-of-type {
+  margin-bottom: 0;
+}
+
+.gofan-action .btn {
+  width: 100%;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+}
+
+.gofan-action .btn-outline {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.gofan-action__note {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #999999;
+  font-style: italic;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .gofan-card {
+    padding: 32px 24px;
+  }
+
+  .gofan-intro {
+    text-align: left;
+  }
+}

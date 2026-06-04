@@ -1,0 +1,91 @@
+/* ============================================================
+   ABOUT US PAGE STYLES
+   ============================================================ */
+
+/* ---------- Mission ---------- */
+.about-mission {
+  max-width: 680px;
+  margin-bottom: 8px;
+}
+
+.about-mission p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+/* ---------- Team Grid ---------- */
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.about-member-card {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 24px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: background-color 0.15s ease;
+}
+
+.about-member-card:hover {
+  background-color: #f5f5f5;
+}
+
+/* CSS-only photo placeholder */
+.about-member-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e8e8e8;
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: #999999;
+  font-size: 0.7rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-member-name {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 4px;
+  color: #000000;
+}
+
+.about-member-role {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #666666;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Advisor ---------- */
+.about-advisor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .about-team-grid,
+  .about-advisor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-team-grid,
+  .about-advisor-grid {
+    grid-template-columns: 1fr;
+  }
+}

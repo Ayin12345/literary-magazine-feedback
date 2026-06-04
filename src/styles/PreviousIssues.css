@@ -1,0 +1,146 @@
+/* ============================================================
+   PREVIOUS ISSUES PAGE STYLES
+   ============================================================ */
+
+/* ---------- Upload Notice Banner ---------- */
+.issues-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+}
+
+.issues-notice__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.issues-notice p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #444444;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ---------- Intro ---------- */
+.issues-intro {
+  max-width: 680px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.issues-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+/* ---------- Issues Grid ---------- */
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.issues-card {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.issues-card:hover {
+  background-color: #f5f5f5;
+}
+
+/* Tall cover placeholder — simulates portrait magazine cover */
+.issues-card__cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #e8e8e8;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.issues-card__cover-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+
+.issues-card__cover-vol {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* Cover inner border decoration — editorial feel */
+.issues-card__cover::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #cccccc;
+  pointer-events: none;
+}
+
+/* ── Card Body ── */
+.issues-card__body {
+  padding: 20px 24px 24px;
+}
+
+.issues-card__title {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.issues-card__year {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888888;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* Disabled PDF button */
+.issues-card__pdf-btn {
+  display: inline-block;
+  background-color: #cccccc;
+  color: #888888;
+  border: 2px solid #cccccc;
+  border-radius: 0;
+  padding: 10px 22px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .issues-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

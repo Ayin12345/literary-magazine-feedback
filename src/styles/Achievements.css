@@ -1,0 +1,144 @@
+/* ============================================================
+   ACHIEVEMENTS PAGE STYLES
+   ============================================================ */
+
+/* ---------- Intro ---------- */
+.achievements-intro {
+  max-width: 680px;
+  margin-bottom: 8px;
+}
+
+.achievements-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+/* ---------- Timeline ---------- */
+.achievements-timeline {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.achievements-timeline__entry {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  border-bottom: 1px solid #cccccc;
+  transition: background-color 0.15s ease;
+}
+
+.achievements-timeline__entry:last-child {
+  border-bottom: none;
+}
+
+.achievements-timeline__entry:hover {
+  background-color: #f5f5f5;
+}
+
+/* Year badge column */
+.achievements-timeline__year {
+  padding: 28px 24px;
+  border-right: 2px solid #000000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.achievements-timeline__year span {
+  font-family: 'Georgia', serif;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #333333;
+  letter-spacing: 0.04em;
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+}
+
+/* Content column */
+.achievements-timeline__content {
+  padding: 28px 32px;
+}
+
+.achievements-timeline__title {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.achievements-timeline__desc {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* ---------- Publications Cards ---------- */
+.achievements-publications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.achievements-pub-card {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 28px 24px;
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.achievements-pub-card:hover {
+  background-color: #f5f5f5;
+}
+
+.achievements-pub-card__label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.achievements-pub-card__title {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.achievements-pub-card__detail {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .achievements-timeline__entry {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .achievements-timeline__year {
+    padding: 20px 12px;
+  }
+
+  .achievements-timeline__content {
+    padding: 20px 16px;
+  }
+
+  .achievements-publications-grid {
+    grid-template-columns: 1fr;
+  }
+}

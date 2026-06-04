@@ -1,0 +1,24 @@
+/* ============================================================
+   FOOTER STYLES
+   ============================================================ */
+
+.footer {
+  border-top: 1px solid #cccccc;
+  padding: 24px 32px;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: auto;
+}
+
+.footer p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #555555;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 16px;
+  }
+}
