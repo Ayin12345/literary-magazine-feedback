@@ -37,7 +37,7 @@ This is a rough draft of the website. I didn't add any styling or backend or any
 
 ---
 
-## To run it locally
+## To run it locally type in terminal
 
 ```bash
 npm install
